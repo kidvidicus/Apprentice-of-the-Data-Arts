@@ -1,4 +1,5 @@
 -- Getting acquanted with the data
+
 SELECT * FROM videogame_sales.unit_sales as vgsales
 
 -- Grouping the sales by genre and platform
@@ -18,6 +19,7 @@ GROUP BY
     genre, platform
 ORDER BY
     total_global_sales DESC;
+
 
 --Grouping by decade across regions starting with 1990
 
@@ -51,7 +53,9 @@ GROUP BY
 ORDER BY
     num_games DESC;
 
+
 -- Omitting the platforms with low-volume unit sales
+
 SELECT
     genre,
     platform,
@@ -70,9 +74,13 @@ GROUP BY
 ORDER BY
     genre, total_global_sales DESC;
 
+
+
 --Group genre and platform by decade starting from 1990. Omitting low-volume platforms and summarizing sales.
 --Decades are depicted by their starting year ie. 1990-1999 is donated as decade -> 1990. 
+
 SELECT
+
     (year / 10) * 10 AS decade,
     genre,
     platform,
@@ -93,7 +101,9 @@ ORDER BY
     decade ASC,
     total_global_sales DESC;
 
+
 -- Sales by genre and platform broken down by region. 
+
 SELECT
     genre,
     platform,
@@ -114,6 +124,7 @@ ORDER BY
 	
 
 -- Looking at the percentage of each genre's global sales relative to the total global sales for its respective platform.
+
 SELECT
     genre,
     platform,
@@ -134,6 +145,7 @@ ORDER BY
 	
 
 -- Percentage of each genre by decade relative to each platform globally
+
 SELECT
     (year / 10) * 10 AS decade,
     genre,
@@ -155,7 +167,9 @@ ORDER BY
     decade, platform, genre_pct_of_platform_sales_global DESC;
 
 
+
 -- Percentage of Sales for each platform narrowed down by region
+
 SELECT
     (year / 10) * 10 AS decade,
     genre,
@@ -200,7 +214,10 @@ ORDER BY
     decade, platform, pct_na_sales DESC;
 
 
+
 -- Finding games that have at least one sequel
+-- I sought outside help with these remaining queiries
+-- I wanted to find the games with sequels so I could explore trends between original titles and their sequels
 
 
 WITH cleaned_titles AS (
