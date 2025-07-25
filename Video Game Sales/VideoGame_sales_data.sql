@@ -1,9 +1,9 @@
---- Getting acquanted with the data
-```
+-- Getting acquanted with the data
+
 SELECT * FROM videogame_sales.unit_sales as vgsales
 
 -- Grouping the sales by genre and platform
-```
+
 SELECT
     genre,
     platform,
@@ -19,9 +19,9 @@ GROUP BY
     genre, platform
 ORDER BY
     total_global_sales DESC;
-```
 
---Grouping by decade across regions starting with 1990
+
+-- Grouping by decade across regions starting with 1990
 
 SELECT
     (year / 10) * 10 AS decade,
@@ -76,8 +76,8 @@ ORDER BY
 
 
 
---Group genre and platform by decade starting from 1990. Omitting low-volume platforms and summarizing sales.
---Decades are depicted by their starting year ie. 1990-1999 is donated as decade -> 1990. 
+-- Group genre and platform by decade starting from 1990. Omitting low-volume platforms and summarizing sales.
+-- Decades are depicted by their starting year ie. 1990-1999 is donated as decade -> 1990. 
 
 SELECT
 
