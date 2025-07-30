@@ -13,7 +13,7 @@ Welcome! This repository is part of my personal portfolio as I learn and grow my
 If I stay the course, this should be a collection of projects and notebooks reflecting my journey into data analysis. Each section will include cleaned datasets, SQL queries, Excel dashboards, and ongoing documentation of what I’m learning.
 
 Key skills I'm focusing on:
-- Data cleaning and transformation (SQL, Excel)
+- Data cleaning and transformation (SQL, Excel, Power Query)
 - Exploratory data analysis (EDA)
 - Data visualization (Excel charts, Tableau)
 - Communicating insights clearly
