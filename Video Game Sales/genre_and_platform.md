@@ -1,6 +1,6 @@
 ## Sales by genre and platform
 
-```
+```postgresql
 SELECT
     genre,
     platform,
@@ -21,7 +21,7 @@ ORDER BY
 
 --  Grouping by decade across regions starting with 1990
 
-```
+```postgresql
 SELECT
     (year / 10) * 10 AS decade,
     genre,
@@ -45,7 +45,7 @@ ORDER BY
 
 -- Omitting the platforms with low-volume unit sales
 
-```
+```postgresql
 SELECT
     genre,
     platform,
@@ -91,11 +91,12 @@ GROUP BY
 ORDER BY
     decade ASC,
     total_global_sales DESC;
-    ```
+```
 
 
 -- Sales by genre and platform broken down by region.
-```
+
+```postgresql
 SELECT
     genre,
     platform,
