@@ -1,7 +1,7 @@
 -- Getting acquanted with the data
 
 ```
-SELECT * FROM videogame_sales.unit_sales 
+SELECT * FROM videogame_sales.unit_sales;
 ```
 
 -- Grouping the sales by genre and platform
