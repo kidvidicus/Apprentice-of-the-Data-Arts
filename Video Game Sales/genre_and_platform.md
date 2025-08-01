@@ -70,7 +70,7 @@ ORDER BY
 -- Group genre and platform by decade starting from 1990. Omitting low-volume platforms and summarizing sales.
 -- Decades are depicted by their starting year ie. 1990-1999 is denoted as decade -> 1990. 
 
-```
+```postgresql
 SELECT
     (year / 10) * 10 AS decade,
     genre,
@@ -94,7 +94,7 @@ ORDER BY
     ```
 
 
--- Sales by genre and platform broken down by region. 
+-- Sales by genre and platform broken down by region.
 ```
 SELECT
     genre,
