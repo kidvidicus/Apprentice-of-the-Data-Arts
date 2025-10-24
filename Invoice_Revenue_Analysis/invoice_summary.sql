@@ -1,36 +1,3 @@
-
-select count(*), status
-from invoices
-group by status
-limit 100;
-
-
-select *
-from invoices
--- where status in ('Paid', 'Partially Paid', 'Void')
-limit 100;
-
--- Calculating Paid and Partially Paid invoices into revenue
-select
-  sum(total_amount - discount_amount + tax_amount) as total_revenue
-from invoices
-where status in ('Paid', 'Partially Paid'); 
-
--- Calculating outstaning or contested balances not counted in revenue
-select
-  sum(total_amount - discount_amount + tax_amount) as total_outstanding
-from invoices
-where status in ('Overdue', 'Issued', 'Void', 'Disputed', 'Draft')
-
-
--- Calculating positive and negative revenue
-select
-  sum(case when status in ('Paid', 'Partially Paid')
-    then total_amount - discount_amount + tax_amount else 0 end) as total_revenue,
-  sum(case when status in ('Overdue', 'Issued', 'Void', 'Disputed', 'Draft')
-    then total_amount - discount_amount + tax_amount else 0 end) as total_outstanding
-from invoices; 
-
 -- paid invoice count by project ID
 select
   project_id,
@@ -173,4 +140,5 @@ select
   end as pct_uncollected
 from project_summary
 order by project_id;
+
   
