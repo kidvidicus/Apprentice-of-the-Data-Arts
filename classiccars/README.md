@@ -2,8 +2,8 @@
 This project analyzes historical order data to answer business questions pertaining to the classic_cars data set. (More questions will be added)
 
 * What products are commonly purchased together, and which combinations are rare?
-
 * What does overall sales performance look like for 2004, broken down by product and geography?
+* How do customer credit limits relate to sales performance, and which orders contribute most to revenue?
 
 The goal of this project is to demonstrate SQL querying, aggregation logic, and clear business-focused roeporting using Excel
 
