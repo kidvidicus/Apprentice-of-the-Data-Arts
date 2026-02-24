@@ -31,6 +31,18 @@ Raw data is retained in the first worksheet, with summarized views used for pres
 
 ---
 
+## Sales & Credit Analysis
+This analysis examines customer order data to understand sales performance relative to customer credit limits. The goal is to identify patterns such as whether higher-credit customers generate higher revenue, and which individual orders contribute most to overall sales.
+
+* Total revenue broken down by country
+* Sales summarized by credit limit group
+* Customer-level sales compared to credit limits (% utilization)
+* Top 10 highest-value orders with associated credit group
+* Average Order Value (AOV) calculated to contextualize order behavior
+
+Pivot tables and curated tables were used to summarize results, while charts provide visual insights for reporting. Raw data and SQL-aggregated data are retained for transparency and reproducibility.
+
+---
 ## Tools and Techniques
 * SQL was used for data preparation and aggregation.
 * Excel was used for pivot tables and presentation.
