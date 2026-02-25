@@ -40,7 +40,7 @@ This analysis examines customer order data to understand sales performance relat
 * Top 10 highest-value orders with associated credit group
 * Average Order Value (AOV) calculated to contextualize order behavior
 
-Pivot tables and curated tables were used to summarize results, while charts provide visual insights for reporting. Raw data and SQL-aggregated data are retained for transparency and reproducibility.
+Pivot tables and curated tables were used to summarize results, while charts provide visual insights for reporting.
 
 ---
 ## Tools and Techniques
