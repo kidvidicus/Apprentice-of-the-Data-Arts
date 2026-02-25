@@ -1,5 +1,5 @@
 ##  Overview
-This project analyzes historical order data to answer business questions pertaining to the classic_cars data set.
+This project analyzes historical order data to answer questions pertaining to the classic_cars data set.
 
 * What products are commonly purchased together, and which combinations are rare?
 * What does overall sales performance look like for 2004, broken down by product and geography?
