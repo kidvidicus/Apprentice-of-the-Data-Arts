@@ -1,5 +1,5 @@
 ##  Overview
-This project analyzes historical order data to answer business questions pertaining to the classic_cars data set. (More questions will be added)
+This project analyzes historical order data to answer business questions pertaining to the classic_cars data set.
 
 * What products are commonly purchased together, and which combinations are rare?
 * What does overall sales performance look like for 2004, broken down by product and geography?
@@ -44,7 +44,7 @@ Pivot tables and curated tables were used to summarize results, while charts pro
 
 ---
 ## Tools and Techniques
-* SQL was used for data preparation and aggregation.
+* postgreSQL was used for data preparation and aggregation.
 * Excel was used for pivot tables and presentation.
 ---
 
