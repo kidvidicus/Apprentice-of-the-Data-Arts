@@ -5,7 +5,7 @@ This project analyzes historical order data to answer questions pertaining to th
 * What does overall sales performance look like for 2004, broken down by product and geography?
 * How do customer credit limits relate to sales performance, and which orders contribute most to revenue?
 
-The goal of this project is to demonstrate SQL querying, aggregation logic, and clear business-focused roeporting using Excel
+The goal of this project is to demonstrate SQL querying, aggregation logic, and clear business-focused reporting using Excel
 
 ---
 
