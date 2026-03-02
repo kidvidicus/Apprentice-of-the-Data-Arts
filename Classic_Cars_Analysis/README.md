@@ -43,8 +43,18 @@ This analysis examines customer order data to understand sales performance relat
 Pivot tables and curated tables were used to summarize results, while charts provide visual insights for reporting.
 
 ---
+## First Order Analysis
+This analysis examines whether new customers tend to spend more on their first purchase compared to subsequent orders.
+
+* SQL was used to rank customer orders (row_number() and lag() functions) and calculate order-to-order differences.
+* Excel pivot tables summarize order value changes by order rank, including percentage and absolute differences.
+* Charts visualize early spending trends and lifetime order value, with high-volume customers noted separately to preserve scale and interpretability.
+
+Conditional formatting highlights positive and negative order changes, allowing for quick visual interpretation of trends
+
+---
 ## Tools and Techniques
-* postgreSQL was used for data preparation and aggregation.
+* PostgreSQL was used for data preparation and aggregation.
 * Excel was used for pivot tables and presentation.
 ---
 
