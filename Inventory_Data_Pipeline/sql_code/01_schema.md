@@ -41,6 +41,7 @@ create table material_classes (
 ```
 
 -- Data staging before populating tables. To be used to unnest additional_classes into the classes table
+-- Staging data imported from csv file - staging_inventory_clean.csv
 ```
 create table staging_materials (
   material_type text,
