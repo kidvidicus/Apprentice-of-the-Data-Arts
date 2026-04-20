@@ -1,4 +1,4 @@
---materials type data insert - material_type, item_description, notes, material_name, url_link
+-- Insert distinct materials (skip empty names/descriptions)
 ```
 insert into materials (
   material_type,
@@ -20,7 +20,7 @@ where not exists (
   where m.material_name = s.material_name
   and m.item_description = s.item_description);
 ```
---vendor Name data insert 
+-- Insert distinct vendors (skip null/empty)
 ```  
 insert into vendors (vendor_name)
 select distinct trim(vendor)
@@ -28,7 +28,7 @@ from staging_materials
 where vendor is not null
   and trim(vendor) <> '';
 ```
---class name data insert
+-- Insert distinct classes (skip null/empty)
 ```
 insert into classes (class_name)
 select distinct class_name
@@ -37,7 +37,7 @@ where class_name is not null
   and trim(class_name) <> '';
 ```
   
---bridge table data load - material_vendor_items
+-- Load material_vendor_items (avoid duplicates; trim matching columns)
 ```
 insert into material_vendor_items (material_id, vendor_id, vendor_item_number)
 select
@@ -51,7 +51,7 @@ join vendors v
   on trim(s.vendor) = v.vendor_name;
 ```
 
---bridge table data load - material_classes
+- Load material_classes (distinct, trimmed)
 
 ```
 insert into material_classes (material_id, class_id)
