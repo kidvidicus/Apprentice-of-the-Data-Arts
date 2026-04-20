@@ -1,4 +1,4 @@
---Main tables
+-- Master list of materials (used by inventory and catalogs)
 ```
 create table materials (
   material_id serial primary key,
@@ -21,7 +21,7 @@ create table classes (
 );
 ```
 
---bridge table - material_id, vendor_id, vendor_item_number
+-- Many-to-many link with vendor-specific item numbers
 ```
 create table material_vendor_items (
   item_id serial primary key,
@@ -31,7 +31,7 @@ create table material_vendor_items (
 );
 ```
 
---bridge table - material_id, class_id
+-- Material ↔ class bridge
 ```
 create table material_classes (
   material_id int references materials(material_id),
@@ -40,8 +40,8 @@ create table material_classes (
 );
 ```
 
--- Data staging before populating tables. To be used to unnest additional_classes into the classes table
--- Staging data imported from csv file - staging_inventory_clean.csv
+-- Staging table for CSV import; additional_classes needs unnesting  
+-- Staging data imported from csv file: staging_inventory_clean.csv
 ```
 create table staging_materials (
   material_type text,
